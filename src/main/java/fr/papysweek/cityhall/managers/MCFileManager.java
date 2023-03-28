@@ -12,12 +12,12 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-public class MCFile {
+public class MCFileManager {
 
-    public static ArrayList<MCFile> defaultFiles = new ArrayList<>();
-    public static MCFile BASE_CONFIG = registerDefault(new MCFile("config.yml"));
+    public static ArrayList<MCFileManager> defaultFiles = new ArrayList<>();
+    public static MCFileManager BASE_CONFIG = registerDefault(new MCFileManager("config.yml"));
 
-    private static MCFile registerDefault(MCFile file) {
+    private static MCFileManager registerDefault(MCFileManager file) {
         defaultFiles.add(file);
         return file;
     }
@@ -25,17 +25,17 @@ public class MCFile {
     private final String fileName;
     private final File dataFolder;
 
-    private MCFile(String fileName) {
+    private MCFileManager(String fileName) {
         this.fileName = fileName;
         this.dataFolder = CityHall.getInstance().getDataFolder();
     }
 
-    private MCFile(String fileName, String path) {
+    private MCFileManager(String fileName, String path) {
         this.fileName = fileName;
         this.dataFolder = new File(CityHall.getInstance().getDataFolder().getPath() + File.separator + path);
     }
 
-    private MCFile(String fileName, String path, Boolean pluginsFolder) {
+    private MCFileManager(String fileName, String path, Boolean pluginsFolder) {
 
         this.fileName = fileName;
 

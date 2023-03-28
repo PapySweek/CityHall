@@ -6,3 +6,5 @@ description: My plugin will be a plugin for a manage a cityhall in a survival se
 commands:
   cityhall:
     description: Command for CityHall informations
+  jsonstorage:
+    description: Testing command for JsonStorage

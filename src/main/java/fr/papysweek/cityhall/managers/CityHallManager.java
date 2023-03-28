@@ -6,8 +6,8 @@ public class CityHallManager {
 
         public static void enable() {
                 //load configManager
-                for (MCFile mcFile : MCFile.defaultFiles){
-                        mcFile.create(CityHall.getInstance().getLogger());
+                for (MCFileManager mcFileManager : MCFileManager.defaultFiles){
+                        mcFileManager.create(CityHall.getInstance().getLogger());
                 }
                 //load RegisterManager
                 RegisterManager.register();
