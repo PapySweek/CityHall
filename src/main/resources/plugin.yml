@@ -1,0 +1,8 @@
+name: CityHall
+version: '${project.version}'
+main: fr.papysweek.cityhall.CityHall
+api-version: 1.19
+description: My plugin will be a plugin for a manage a cityhall in a survival server
+commands:
+  cityhall:
+    description: Command for CityHall informations
